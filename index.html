@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flamme Visionnaire Insight株式会社｜外国人材支援・DX支援</title>
+  <meta name="description" content="Flamme Visionnaire Insight株式会社は、外国人材支援、営業支援、応募者管理、CRM構築、業務自動化、AI活用によるDX支援を行う会社です。" />
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --card: #15151c;
+      --gold: #c9a646;
+      --gold-soft: #e2c76f;
+      --text: #f5f5f5;
+      --muted: #b8b8c4;
+      --line: rgba(255,255,255,0.12);
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+      background: radial-gradient(circle at top left, rgba(201,166,70,0.18), transparent 32%), var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--gold-soft);
+      font-size: 18px;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a:hover {
+      color: var(--gold-soft);
+    }
+
+    .hero {
+      padding: 92px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 1px solid rgba(201,166,70,0.45);
+      color: var(--gold-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 22px;
+      background: rgba(201,166,70,0.08);
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold-soft);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.32);
+    }
+
+    .hero-card h2 {
+      color: var(--gold-soft);
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin-bottom: 36px;
+    }
+
+    .section-title span {
+      color: var(--gold-soft);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .section-title h2 {
+      font-size: clamp(26px, 3vw, 40px);
+      margin-top: 8px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+    }
+
+    .card h3 {
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .card ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    .flow {
+      display: grid;
+      gap: 14px;
+    }
+
+    .flow-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 16px;
+      align-items: start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(201,166,70,0.16);
+      color: var(--gold-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .flow-item h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .flow-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .note {
+      margin-top: 28px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      padding: 18px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .company-table th,
+    .company-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .company-table th {
+      width: 28%;
+      color: var(--gold-soft);
+      background: rgba(201,166,70,0.08);
+    }
+
+    .company-table td {
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    footer {
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 64px 0 54px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Flamme Visionnaire Insight株式会社</div>
+      <nav>
+        <a href="#services">事業内容</a>
+        <a href="#flow">支援フロー</a>
+        <a href="#strength">強み</a>
+        <a href="#company">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Foreign Human Resources Support / DX Consulting</div>
+          <h1>外国人材支援とDXで、<br>企業の採用・営業・業務管理を前へ。</h1>
+          <p class="lead">
+            Flamme Visionnaire Insight株式会社は、外国人材に関する営業支援、応募者管理、CRM構築、業務自動化、AI活用支援を通じて、企業の実務負担を軽減し、事業成長を支援します。
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">相談する</a>
+            <a class="btn btn-secondary" href="#services">事業内容を見る</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>対応領域</h2>
+          <ul>
+            <li>外国人材関連の営業支援・業務設計</li>
+            <li>応募者管理システム・CRM構築</li>
+            <li>WhatsApp / LINE / Googleフォーム導線設計</li>
+            <li>n8n・Google Workspaceによる業務自動化</li>
+            <li>AI活用による資料作成・翻訳・業務効率化</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <span>SERVICES</span>
+          <h2>事業内容</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>外国人材支援・営業支援</h3>
+            <p>
+              インドネシア人材を中心とした外国人材領域において、登録支援機関・受入企業・海外関係先との営業支援、連絡導線設計、応募者対応体制の構築を支援します。
+            </p>
+          </div>
+          <div class="card">
+            <h3>応募者管理・CRM構築</h3>
+            <p>
+              Googleフォーム、Notion、Googleスプレッドシート等を活用し、応募者情報、面談状況、希望職種、連絡履歴、進捗管理を一元化します。
+            </p>
+          </div>
+          <div class="card">
+            <h3>DX・AI業務自動化</h3>
+            <p>
+              n8n、Google Apps Script、Google Workspace、生成AIを活用し、通知、データ整理、営業管理、資料作成、翻訳、要約などの業務効率化を支援します。
+            </p>
+          </div>
+        </div>
+        <div class="note">
+          ※当社は、法令を遵守し、業務範囲を明確化したうえで、営業支援・業務設計・管理体制構築・DX支援を行います。
+        </div>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="container">
+        <div class="section-title">
+          <span>WORKFLOW</span>
+          <h2>実務導線の設計</h2>
+        </div>
+        <div class="flow">
+          <div class="flow-item">
+            <div class="num">1</div>
+            <div>
+              <h3>SNSから問い合わせ獲得</h3>
+              <p>TikTok等のSNSから外国人応募者の問い合わせを受け、応募導線へ誘導します。</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div class="num">2</div>
+            <div>
+              <h3>WhatsApp / LINEで連絡導線を分離</h3>
+              <p>インドネシア人応募者はWhatsApp、日本企業・支援機関はLINE等を活用し、連絡手段を整理します。</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div class="num">3</div>
+            <div>
+              <h3>Googleフォームで応募情報取得</h3>
+              <p>氏名、在留状況、日本語レベル、希望職種、連絡先等をフォームで取得します。</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div class="num">4</div>
+            <div>
+              <h3>Notion / Spreadsheetで一元管理</h3>
+              <p>応募者情報、面談状況、営業進捗をデータベース化し、属人的管理を防ぎます。</p>
+            </div>
+          </div>
+          <div class="flow-item">
+            <div class="num">5</div>
+            <div>
+              <h3>n8nで通知・更新を半自動化</h3>
+              <p>新規応募通知、ステータス更新、社内通知、営業管理を自動化し、少人数運営を可能にします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="strength">
+      <div class="container">
+        <div class="section-title">
+          <span>STRENGTH</span>
+          <h2>当社の強み</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>外国人材領域への実務理解</h3>
+            <ul>
+              <li>インドネシア人材との連絡導線に対応</li>
+              <li>登録支援機関・受入企業向けの営業支援</li>
+              <li>応募者管理・面談管理・進捗管理の仕組み化</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>低コストDX・自動化設計</h3>
+            <ul>
+              <li>Google Workspace / Notion / n8nの活用</li>
+              <li>小規模事業者でも導入しやすい運用設計</li>
+              <li>生成AIによる翻訳・資料作成・業務整理</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="company">
+      <div class="container">
+        <div class="section-title">
+          <span>COMPANY</span>
+          <h2>会社概要</h2>
+        </div>
+        <table class="company-table">
+          <tr>
+            <th>会社名</th>
+            <td>Flamme Visionnaire Insight株式会社</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役　藤本 敬三</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>外国人材支援、営業支援、応募者管理、CRM構築、DX支援、業務自動化、AI活用支援</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>山梨県甲府市</td>
+          </tr>
+          <tr>
+            <th>Web</th>
+            <td>https://flamme-vi.com</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <span>CONTACT</span>
+          <h2>お問い合わせ</h2>
+        </div>
+        <div class="card">
+          <p>
+            外国人材領域の営業支援、応募者管理、CRM構築、DX・AI業務自動化に関するご相談は、下記メールアドレスよりお問い合わせください。
+          </p>
+          <p style="margin-top: 16px; font-size: 18px; color: var(--gold-soft); font-weight: 700;">
+            k.fujimoto@flamme-vi.com
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © Flamme Visionnaire Insight株式会社. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
